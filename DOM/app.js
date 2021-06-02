@@ -15,9 +15,9 @@ function buttonClick(e) {
 let stepTwoButton = document.querySelector(`button.stepTwo`)
 
 stepTwoButton.addEventListener(`click`, function() {
-    let alertText = document.querySelector(`div.stepTwo`)
+    let alertText = document.querySelector(`textarea.stepTwo`)
 
-    alert(alertText.textContent)
+    alert(alertText.value)
 })
 
 // step 3
@@ -34,12 +34,10 @@ stepThree.addEventListener(`pointerleave`, function() {
 })
 
 // step 4
-let stepFour = document.querySelector(`p`)
+let stepFour = document.querySelector(`p.stepFour`)
+let randomColor = ["red", "orange", "yellow", "green", "blue", "purple"]
 
 stepFour.addEventListener(`click`, function() {
-    
-    let randomColor = ["red", "orange", "yellow", "green", "blue", "purple"]
-    
     stepFour.style.color = randomColor[Math.floor(Math.random() * randomColor.length)]
 })
 
